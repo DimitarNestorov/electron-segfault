@@ -1,6 +1,8 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 
+require('@sentry/electron').init({dsn: 'https://45528e0155754fe184d09f916051fe3f@sentry.io/1', release: '123'});
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow

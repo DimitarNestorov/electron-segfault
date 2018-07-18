@@ -1,10 +1,11 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-quick-start-test",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "build --linux"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,9 +15,26 @@
     "tutorial",
     "demo"
   ],
+  "build": {
+    "files": [
+      "index.html",
+      "main.js",
+      "renderer.js"
+    ],
+    "snap": {
+      "useTemplateApp": true
+    },
+    "linux": {
+      "target": "snap"
+    }
+  },
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-builder": "20.22.0"
+  },
+  "dependencies": {
+    "@sentry/electron": "0.7.0"
   }
 }
