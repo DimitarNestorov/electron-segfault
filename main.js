@@ -1,9 +1,9 @@
 // Modules to control application life and create native browser window
 const electron = require('electron')
-const {app, BrowserWindow} = electron;
+const {app, BrowserWindow, powerMonitor} = electron;
 
 app.once('ready', () => {
-  let lastEmit = electron.powerMonitor.emit;
+  powerMonitor;
 });
 
 // Keep a global reference of the window object, if you don't, the window will
